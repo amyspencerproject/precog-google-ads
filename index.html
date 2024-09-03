@@ -36,7 +36,7 @@
                     <p>
                       This will be either your <strong>Google Ads Manager Id</strong> or 
                       your <strong>Google Ads Account Id</strong>. Enter your Account Id 
-                      without any hyphens e.g. “123-456-7890” will be '1234567890'. 
+                      without any hyphens e.g. '123-456-7890' will be '1234567890'. 
                     </p>
                   </div>
                   <input class="Input" type="text" placeholder="" /></label
@@ -50,11 +50,14 @@
                 ><div class="Field-label">Client Id (optional)</div>
                 <div class="Field-description">
                   <p>
-                    Using your own developer Client ID and Secret credentials is optional. Enable the 
+                    Using your own developer credentials is optional and requires extra steps. This option will 
+                    not use Google OAuth to access your Google Ads account. If you 
+                    choose this option you will need a Google Ads Manager Account Id. You will also need to 
+                    supply a Client ID and Secret, and a Developer Token. Enable the 
                     <a href="https://console.cloud.google.com/apis/library/googleads.googleapis.com">Google Ads API</a> 
                     in your Google Cloud console. In the API and Services Product section, click 
                     on + Create Credentials and then OAuth Client ID. Select Web Application. Name the 
-                    Web Client “precog” and add https://precog.cloud (or https://eu.precog.cloud if 
+                    Web Client 'precog' and add https://precog.cloud (or https://eu.precog.cloud if 
                     required by GDPR) as the Authorized redirect URI. Click the Create button. Copy
                      the Client ID and Client Secret in the fields below.
                   </p>
@@ -76,10 +79,9 @@
                     Developer Token. You will need to apply for a Developer Token 
                     if you do not have one. Read the 
                     <a href="https://developers.google.com/google-ads/api/docs/get-started/dev-token">Google Ads API documentation</a>  
-                    for more details. To access your Developer Token go to the Google 
-                    Ads 
-                    <a href="https://ads.google.com/aw/apicenter">API Center</a> and select the appropriate Google Ads Manager 
-                    account if needed. Copy your Developer Token below.
+                    for more details. To access your Developer Token go to the  
+                    <a href="https://ads.google.com/aw/apicenter">Google Ads API Center</a> and select the appropriate Google Ads Manager 
+                    account if prompted. Copy your Developer Token below.
                   </p>
                 </div>
                 <input class="Input" type="password" placeholder="" /></label
@@ -90,9 +92,8 @@
                     You can build custom queries to refine the data you access from the Google Ads API. Navigate to the 
                     <a href="https://developers.google.com/google-ads/api/fields/v15/overview_query_builder">Google Ads Query Builder</a> 
                     and select a resource. This will open a new query with 
-                    the resource listed after FROM in the query string. Then 
-                    choose SELECT clauses to refine your Custom Query. The other 
-                    clause types should not be selected, your query will be a string with the form 
+                    the resource listed after FROM in the query string. Then choose SELECT to refine your Custom Query. Do not use the 
+                    other types i.e. WHERE, ORDER BY, LIMIT, or PARAMETERS. Your query will be a string with the form 
                     <code>SELECT ... FROM</code>. For example, the resource ‘Ad Group’ (FROM ad_group) 
                     querying data from fields - id, name, campaign name, and clicks - 
                     will have the query string <code>SELECT ad_group.id, ad_group.name, campaign.name, 
@@ -102,7 +103,7 @@
                   <div class="Field-description">
                     <p>Use the 
                       <a href="https://developers.google.com/google-ads/api/fields/v15/overview_query_builder">Google Ads Query Builder</a> 
-                      to select a FROM resource and then choose SELECT clauses to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
+                      to select a FROM resource and then choose SELECT to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
                     </p>
                   </div>
                   <input class="Input" type="text" placeholder="" /></label
@@ -111,7 +112,7 @@
                   <div class="Field-description">
                     <p>Use the 
                       <a href="https://developers.google.com/google-ads/api/fields/v15/overview_query_builder">Google Ads Query Builder</a> 
-                      to select a FROM resource and then choose SELECT clauses to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
+                      to select a FROM resource and then choose SELECT to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
                     </p>
                   </div>
                   <input class="Input" type="text" placeholder="" /></label
@@ -120,7 +121,7 @@
                   <div class="Field-description">
                     <p>Use the 
                       <a href="https://developers.google.com/google-ads/api/fields/v15/overview_query_builder">Google Ads Query Builder</a> 
-                      to select a FROM resource and then choose SELECT clauses to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
+                      to select a FROM resource and then choose SELECT to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
                     </p>
                   </div>
                   <input class="Input" type="text" placeholder="" /></label
@@ -129,7 +130,7 @@
                   <div class="Field-description">
                     <p>Use the 
                       <a href="https://developers.google.com/google-ads/api/fields/v15/overview_query_builder">Google Ads Query Builder</a> 
-                      to select a FROM resource and then choose SELECT clauses to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
+                      to select a FROM resource and then choose SELECT to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
                     </p>
                   </div>
                   <input class="Input" type="text" placeholder="" /></label
@@ -138,7 +139,7 @@
                   <div class="Field-description">
                     <p>Use the 
                       <a href="https://developers.google.com/google-ads/api/fields/v15/overview_query_builder">Google Ads Query Builder</a> 
-                      to select a FROM resource and then choose SELECT clauses to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
+                      to select a FROM resource and then choose SELECT to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
                     </p>
                   </div>
                   <input class="Input" type="text" placeholder="" /></label
@@ -147,7 +148,7 @@
                   <div class="Field-description">
                     <p>Use the 
                       <a href="https://developers.google.com/google-ads/api/fields/v15/overview_query_builder">Google Ads Query Builder</a> 
-                      to select a FROM resource and then choose SELECT clauses to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
+                      to select a FROM resource and then choose SELECT to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
                     </p>
                   </div>
                   <input class="Input" type="text" placeholder="" /></label
@@ -156,7 +157,7 @@
                   <div class="Field-description">
                     <p>Use the 
                       <a href="https://developers.google.com/google-ads/api/fields/v15/overview_query_builder">Google Ads Query Builder</a> 
-                      to select a FROM resource and then choose SELECT clauses to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
+                      to select a FROM resource and then choose SELECT to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
                     </p>
                   </div>
                   <input class="Input" type="text" placeholder="" /></label
@@ -165,7 +166,7 @@
                   <div class="Field-description">
                     <p>Use the 
                       <a href="https://developers.google.com/google-ads/api/fields/v15/overview_query_builder">Google Ads Query Builder</a> 
-                      to select a FROM resource and then choose SELECT clauses to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
+                      to select a FROM resource and then choose SELECT to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
                     </p>
                   </div>
                   <input class="Input" type="text" placeholder="" /></label
@@ -174,7 +175,7 @@
                   <div class="Field-description">
                     <p>Use the 
                       <a href="https://developers.google.com/google-ads/api/fields/v15/overview_query_builder">Google Ads Query Builder</a> 
-                      to select a FROM resource and then choose SELECT clauses to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
+                      to select a FROM resource and then choose SELECT to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
                     </p>
                   </div>
                   <input class="Input" type="text" placeholder="" /></label
@@ -183,7 +184,7 @@
                   <div class="Field-description">
                     <p>Use the 
                       <a href="https://developers.google.com/google-ads/api/fields/v15/overview_query_builder">Google Ads Query Builder</a> 
-                      to select a FROM resource and then choose SELECT clauses to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
+                      to select a FROM resource and then choose SELECT to refine your Custom Query. Your query will be a string with the form <code>SELECT ... FROM</code>. Copy the query string and paste it here.
                     </p>
                   </div>
                   <input class="Input" type="text" placeholder=""
