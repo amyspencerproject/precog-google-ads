@@ -49,7 +49,7 @@
                 ><label class="Field"
                 ><div class="Field-label">Client Id (optional)</div>
                 <div class="Field-description">
-                  <p>
+                  <!-- <p>
                     Using your own developer credentials is optional and requires extra steps. This option will 
                     not use Google OAuth to access your Google Ads account. If you 
                     choose this option you will need a Google Ads Manager Account Id. You will also need to 
@@ -60,10 +60,26 @@
                     Web Client 'precog' and add https://precog.cloud (or https://eu.precog.cloud if 
                     required by GDPR) as the Authorized redirect URI. Click the Create button. Copy
                      the Client ID and Client Secret in the fields below.
-                  </p>
+                  </p> -->
                 </div>
                 <input class="Input" type="text" placeholder="" /></label
               ><label class="Field"
+              ><div class="Field-label">Client Id (optional)</div>
+              <div class="Field-description">
+                <p>
+                  Using your own developer credentials is optional and not recommended for a typical Precog customer. If you 
+                  choose this option you will need a <strong>Google Ads Manager Account Id</strong>. You will also need to 
+                  supply a <strong>Client ID</strong>, <strong>Client Secret</strong>, and a <strong>Developer Token</strong>. Enable the 
+                  <a href="https://console.cloud.google.com/apis/library/googleads.googleapis.com">Google Ads API</a> 
+                  in your Google Cloud console. In the API and Services Product section, click 
+                  on + Create Credentials and then OAuth Client ID. Select Web Application. Name the 
+                  Web Client 'precog' and add https://precog.cloud (or https://eu.precog.cloud if 
+                  required by GDPR) as the Authorized redirect URI. Click the Create button. Copy
+                   the Client ID and Client Secret in the fields below.
+                </p>
+              </div>
+              <input class="Input" type="text" placeholder="" /></label
+            ><label class="Field"
                 ><div class="Field-label">Client Secret (optional)</div>
                 <div class="Field-description">
                   <p>
